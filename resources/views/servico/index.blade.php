@@ -19,10 +19,10 @@
 			<td>{{$servico->nomeServico}}</td>
 			<td>{{$servico->horarioFunc}}</td>
 			<td>{{$servico->status}}</td>
-			<td><a href="{{route ('servico.show', $servico->id)}}"><button class="btn btn-primary">Ir</button></td>
-				<td><a href="{{route ('servico.destroy', $servico->id)}}"><button class="btn btn-danger" onclick="return deleteRegistro()">Ir</button></a></td>
-			</tr>
+			<td><a href="{{route ('servico.show', $servico->id)}}"><button class="btn btn-primary">Ir</button></a></td>
+			<td><a href="{{route ('servico.destroy', $servico->id)}}"><button class="btn btn-danger" onclick="return deleteRegistro()">Ir</button></a></td>
 			@endforeach
-		</tbody>
-	</table>
-	@endsection
+		</tr>
+	</tbody>
+</table>
+@endsection
