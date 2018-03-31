@@ -19,8 +19,8 @@
 			<td>{{$servico->nomeServico}}</td>
 			<td>{{$servico->horarioFunc}}</td>
 			<td>{{$servico->status}}</td>
-			<td><button class="btn btn-primary">Ir</button></td>
-			<td><button class="btn btn-danger">Ir</button></td>
+			<td><a href="{{route('servico.show', $servico->id)}}"><button class="btn btn-primary">Ir</button></td>
+			<td><button class="btn btn-danger">Ir</button></a></td>
 		</tr>
 		@endforeach
 	</tbody>
