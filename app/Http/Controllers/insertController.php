@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\cadastroModel;
 
 class insertController extends Controller
@@ -10,7 +11,7 @@ class insertController extends Controller
 
     public function index(){
 
-        $servicos = cadastroModel::get(['id', 'nomeServico', 'horarioFunc', 'status']);
+        $servicos = DB::table('cadastro_servicos')->orderBy('id', 'desc')->get(['id', 'nomeServico', 'horarioFunc', 'status']);
         // $servicos = cadastroModel::all();
         return view('servico.index', compact('servicos'));
     }
@@ -54,7 +55,7 @@ class insertController extends Controller
     
     public function destroy($id){
 
-        
+
     }
 
 }
