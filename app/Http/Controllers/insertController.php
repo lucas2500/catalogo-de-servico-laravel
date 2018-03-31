@@ -10,7 +10,8 @@ class insertController extends Controller
 
     public function index(){
 
-        $servicos = cadastroModel::all();
+        $servicos = cadastroModel::get(['id', 'nomeServico', 'horarioFunc', 'status']);
+        // $servicos = cadastroModel::all();
         return view('servico.index', compact('servicos'));
     }
 
@@ -53,7 +54,7 @@ class insertController extends Controller
     
     public function destroy($id){
 
-        //
+        
     }
 
 }

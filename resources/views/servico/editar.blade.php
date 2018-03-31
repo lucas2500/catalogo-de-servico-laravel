@@ -30,7 +30,7 @@
 
 			<div class="form-group">
 				<select class="form-control" name="prioridade" required="">
-					<option>Selecionar prioridade</option>
+					<option value="">Selecionar prioridade</option>
 					<option {{($dados->prioridade == 'Alta'  ? 'selected' : '')}}>Alta</option>
 					<option {{($dados->departamento == 'Média'  ? 'selected' : '')}}>Média</option>
 					<option {{($dados->departamento == 'Baixa'  ? 'selected' : '')}}>Baixa</option>

@@ -117,5 +117,20 @@
 		@yield('content')
 	</div>
 	
+	<script type="text/javascript">
+		
+		function deleteRegistro(objButton){
+
+			var r = confirm("Deseja mesmo excluir este serviço?");
+
+			if(r){
+
+				return r;
+			} else{
+
+				return false;
+			}
+		}
+	</script>
 </body>
 </html>
